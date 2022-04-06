@@ -1,0 +1,39 @@
+{
+  "name": "react-components-libs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "commit": "git-cz",
+    "dev": "lerna exec -- yarn dev",
+    "build": "lerna exec -- yarn build",
+    "test": "jest",
+    "lint": "eslint --fix"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/config-conventional": "^16.2.1",
+    "@umijs/fabric": "^2.10.2",
+    "commitizen": "^4.2.4",
+    "commitlint": "^16.2.3",
+    "cz-lerna-changelog": "^2.0.3",
+    "husky": "^7.0.4",
+    "lerna": "^4.0.0"
+  }
+}
